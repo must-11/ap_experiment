@@ -1,8 +1,18 @@
-import numpy as np
-import pandas as pd
 import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
-import seaborn as sns
+import numpy as np
+
+# パラメータ
+    g = 9.8
+    l_1 = 0.5
+    l_2 = 0.5
+    m_1 = 0.5
+    m_2 = 0.3
+    w = np.sqrt(g / l_1)
+    l = l_2 / l_1
+    M = m_2 / (m_1 + m_2)
+    h = 0.01
+    t = 100
+    n = np.int(t / h)
 
 
 def f(Y):
@@ -31,19 +41,6 @@ def H(Y):
 
 
 def main():
-    # パラメータ
-    g = 9.8
-    l_1 = 0.5
-    l_2 = 0.5
-    m_1 = 0.5
-    m_2 = 0.3
-    w = np.sqrt(g / l_1)
-    l = l_2 / l_1
-    M = m_2 / (m_1 + m_2)
-    h = 0.01
-    t = 100
-    n = np.int(t / h)
-
     Y = np.array([0.1, 0, 0, 0])
     theta = [[0.1], [0]]
     ham = [H(Y)]
@@ -57,14 +54,14 @@ def main():
     fig = plt.figure(figsize=(12, 8))
     plt.plot(x, theta[0], label="theta1")
     plt.plot(x, theta[1], label="theta2")
-    plt.xlabel('time', fontsize = 14)
-    plt.legend(loc = 'upper right')
+    plt.xlabel('time', fontsize=14)
+    plt.legend(loc='upper right')
     fig.savefig("img01.png")
 
     fig = plt.figure(figsize=(12, 8))
     plt.plot(x, ham, label="Hamiltonian")
-    plt.xlabel('time', fontsize = 14)
-    plt.legend(loc = 'upper right')
+    plt.xlabel('time', fontsize=14)
+    plt.legend(loc='upper right')
     fig.savefig("img02.png")
 
 
