@@ -2,17 +2,17 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # パラメータ
-    g = 9.8
-    l_1 = 0.5
-    l_2 = 0.5
-    m_1 = 0.5
-    m_2 = 0.3
-    w = np.sqrt(g / l_1)
-    l = l_2 / l_1
-    M = m_2 / (m_1 + m_2)
-    h = 0.01
-    t = 100
-    n = np.int(t / h)
+g = 9.8
+l_1 = 0.5
+l_2 = 0.5
+m_1 = 0.5
+m_2 = 0.3
+w = np.sqrt(g / l_1)
+l = l_2 / l_1
+M = m_2 / (m_1 + m_2)
+h = 0.01
+t = 100
+n = np.int(t / h)
 
 
 def f(Y):
