@@ -51,3 +51,6 @@ def main():
     plt.subplots(figsize=(5, 5))
     plt.imshow((1-G_), cmap="gray")
     fig.savefig("img.png")
+
+if __name__ == "__main__":
+    main()
