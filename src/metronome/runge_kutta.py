@@ -51,16 +51,19 @@ def main():
             ans[j].append(Y[j])
 
     print('初期条件 (x, v) = (5, 0)')
+    fig = plt.figure(figsize=(12, 8))
     plt.plot(ans[0], ans[1])
     plt.xlabel('x(t)')
     plt.ylabel('v(t)')
     fig.savefig("img01.png")
 
+    fig = plt.figure(figsize=(12, 8))
     plt.plot(t, ans[0])
     plt.xlabel('t')
     plt.ylabel('x(t)')
     fig.savefig("img02.png")
 
+    fig = plt.figure(figsize=(12, 8))
     plt.plot(t, ans[1])
     plt.xlabel('t')
     plt.ylabel('v(t)')
